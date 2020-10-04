@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <style>
+        body {text-align: center;}
+    </style>
+    <title>About</title>
+</head>
+<body style="background-color:MintCream;">
+    <header>
+         <h1 style="color:Teal;">About this project:</h1>
+    </header>
+    <main style="font-size:110%; color:DarkSlateGrey;">
+        <article>
+            <section>
+                On this website you can generate a random customized password.
+            </section>
+        </article>
+    </main>
+    <header>
+         <h1 style="color:Teal;">About the author:</h1>
+    </header>
+    <main style="font-size:110%; color:DarkSlateGrey;">
+        <article>
+            <section>
+                <p>My name is Elena Kolomeets and I am learning web development with python and django at the moment.</p>
+                <p>This is my first website made with django.<p>
+            </section>
+        </article>
+    </main>
+    <footer style="font-size:110%; color:DarkSlateGrey;">
+        <section>
+            Here you can find the code for all my projects:
+            <p><a class="github-button" href="https://github.com/elena-kolomeets" data-color-scheme="no-preference: light; light: light; dark: dark;" aria-label="@elena-kolomeets on GitHub">GitHub @elena-kolomeets</a>
+            </p>
+        </section>
+        <br/>
+        <a href="{% url 'home' %}">
+            <input style="color:Teal; font-size:105%;" type="submit" value="Back to Homepage">
+        </a>
+    </footer>
+<script async defer src="https://buttons.github.io/buttons.js"></script>
+</body>
+</html>
