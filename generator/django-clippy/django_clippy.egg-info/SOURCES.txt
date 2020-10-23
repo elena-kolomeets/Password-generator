@@ -1,0 +1,12 @@
+MANIFEST.in
+README.rst
+setup.cfg
+setup.py
+clippy/__init__.py
+clippy/templatetags/__init__.py
+clippy/templatetags/clippy.py
+django_clippy.egg-info/PKG-INFO
+django_clippy.egg-info/SOURCES.txt
+django_clippy.egg-info/dependency_links.txt
+django_clippy.egg-info/top_level.txt
+tests/__init__.py

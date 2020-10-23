@@ -14,3 +14,5 @@ or
 `>python3 manage.py runserver`
 
 Note: you need to have Django installed (reference requirements.txt)
+
+<img src="password_generator.gif" height="320"/>
