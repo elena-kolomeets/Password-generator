@@ -15,4 +15,4 @@ or
 
 Note: you need to have Django installed (reference requirements.txt)
 
-<img src="password_generator.gif" height="320"/>
+<img src="password_generator.gif" width="850"/>
