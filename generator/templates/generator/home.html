@@ -14,12 +14,14 @@
         .btn:hover {color: DarkSlateGray;}
         .gen {color:MintCream; background-color:Teal; border:none; outline: none; font-size:100%; width:200px; height:45px;}
         .gen:hover {background-color: DarkSlateGray;}
-        @media (max-width: 600px) {.boxes {padding-left:38%}}
+        @media (max-width: 400px) {.boxes {padding-left:30%}}
+        @media (min-width: 500px) {.boxes {padding-left:34%}}
+        @media (min-width: 600px) {.boxes {padding-left:38%}}
         @media (min-width: 700px) {.boxes {padding-left:42%}}
         @media (min-width: 800px) {.boxes {padding-left:45%}}
     </style>
     <link rel="icon" type="image/png" href="{% static 'generator/favicon.ico' %}">
-    <title>Homepage</title>
+    <title>Password Generator</title>
 </head>
 <body style="background-color:MintCream;">
     <h1 style="color:Teal;">Password Generator</h1>
