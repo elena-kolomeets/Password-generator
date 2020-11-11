@@ -1,6 +1,8 @@
 ## Password generator
 
-A website made with django that helps generate a customized random password:
+https://generatepass.herokuapp.com/
+
+A website made with Django that helps generate a customized random password:
 * with a given number of characters
 * with or without uppercase characters
 * with or without numbers
@@ -8,11 +10,6 @@ A website made with django that helps generate a customized random password:
 
 The website also contains an about page.
 
-To run the website open the terminal in "password_generator" directory and run the following command:
-`>python manage.py runserver`
-or
-`>python3 manage.py runserver`
-
-Note: you need to have Django installed (reference requirements.txt)
+Deployed to Heroku from this GitHub repo.
 
 <img src="password_generator.gif" width="850"/>
