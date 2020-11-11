@@ -5,6 +5,13 @@
     <meta name="description" content="This is a password generator website">
     <style>
         body {text-align: center;}
+        form {align-items: center;}
+        .boxes {display: flex; flex-direction: column; align-items: center; padding-left:100px;}
+        .box {display: flex; flex-direction: row; align-items: left; width:20%}
+        .btn {color:Teal; background-color:MintCream; border:none; outline: none; font-size:110%;}
+        .btn:hover {color: DarkSlateGray;}
+        .gen {color:MintCream; background-color:Teal; border:none; outline: none; font-size:100%; width:200px; height:45px;}
+        .gen:hover {background-color: DarkSlateGray;}
     </style>
     <title>Homepage</title>
 </head>
@@ -15,7 +22,7 @@
     one webpage to another url -->
     <form action="{% url 'password' %}" style="font-size:110%; color:DarkSlateGrey; font-family:arial">
         <!-- adding dropdown -->
-        <select name="length" style="font-size:100%; color:DarkSlateGrey;" >
+        <select name="length" style="font-size:90%; color:DarkSlateGrey;" >
             <option value="6">6</option>
             <option value="7">7</option>
             <option value="8">8</option>
@@ -27,19 +34,27 @@
             <option value="14">14</option>
         </select> Length
         <br/><br/>
-        <!-- add a checkbox -->
-        <input type="checkbox" name="uppercase"> Uppercase
-        <br/>
-        <input type="checkbox" name="numbers"> Numbers
-        <br/>
-        <input type="checkbox" name="special"> Special characters
+        <!-- add checkboxes -->
+        <div class="boxes">
+            <div class="box">
+                <input type="checkbox" name="uppercase"> Uppercase
+            </div>
+            <br/>
+            <div class="box">
+                <input type="checkbox" name="numbers"> Numbers
+            </div>
+            <br/>
+            <div class="box">
+                <input type="checkbox" name="special"> Special characters
+            </div>
+        </div>
         <br/><br/>
         <!-- add a button to submit a form -->
-        <input style="color:Teal; font-size:100%;" type="submit" value="Generate Password">
+        <input class="gen" type="submit" value="Generate Password">
     </form>
-    <br/><br/><br/><br/><br/><br/><br/>
+    <br/><br/>
     <a href="{% url 'about' %}">
-        <input style="color:Teal; font-size:110%;" type="submit" value="About">
+        <input class="btn" type="submit" value="About">
     </a>
 </body>
 </html>
