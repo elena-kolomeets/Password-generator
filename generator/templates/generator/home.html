@@ -1,18 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    {% load static %}
     <meta charset="UTF-8">
     <meta name="description" content="This is a password generator website">
     <style>
         body {text-align: center;}
         form {align-items: center;}
-        .boxes {display: flex; flex-direction: column; align-items: center; padding-left:100px;}
-        .box {display: flex; flex-direction: row; align-items: left; width:20%}
+        .boxes {display: flex; flex-direction: column; align-items: left; padding-left:45%;}
+        .box {display: flex; flex-direction: row; align-items: left;}
         .btn {color:Teal; background-color:MintCream; border:none; outline: none; font-size:110%;}
         .btn:hover {color: DarkSlateGray;}
         .gen {color:MintCream; background-color:Teal; border:none; outline: none; font-size:100%; width:200px; height:45px;}
         .gen:hover {background-color: DarkSlateGray;}
     </style>
+    <link rel="icon" type="image/png" href="{% static 'generator/favicon.ico' %}">
     <title>Homepage</title>
 </head>
 <body style="background-color:MintCream;">

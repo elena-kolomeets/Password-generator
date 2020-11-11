@@ -14,6 +14,9 @@ from pathlib import Path
 import os
 import dj_database_url
 import django_heroku
+import environ
+
+environ.Env.read_env()
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -23,10 +26,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/3.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-current_dir = os.path.dirname(os.path.realpath(__file__))
-target_dir = os.path.sep.join(current_dir.split(os.path.sep)[:-2])
-with open(f'{target_dir}/secret_keys/pass_generator_secret_key.txt') as f:
-    SECRET_KEY = f.read().strip()
+SECRET_KEY = os.environ['pass_gen_secret_key']
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
@@ -81,19 +81,16 @@ WSGI_APPLICATION = 'password_gen.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.1/ref/settings/#databases
 
-f1 = open(f'{target_dir}/secret_keys/pass_gen_postgres_password.txt')
-
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
         'NAME': 'passdb',
         'USER': 'postgres',
-        'PASSWORD': f1.read().strip(),
+        'PASSWORD': os.environ['pass_gen_db_pass'],
         'HOST': 'localhost',
         'PORT': '5432',
     }
 }
-f1.close()
 
 # Password validation
 # https://docs.djangoproject.com/en/3.1/ref/settings/#auth-password-validators
@@ -131,8 +128,8 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
 
-STATIC_ROOT = BASE_DIR / 'staticfiles'
 STATIC_URL = '/static/'
+STATIC_ROOT = BASE_DIR / 'staticfiles'
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 # Activate Django-Heroku.
