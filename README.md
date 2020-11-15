@@ -10,6 +10,4 @@ A website made with Django that helps generate a customized random password:
 
 The website also contains an about page.
 
-Deployed to Heroku from this GitHub repo.
-
-<img src="password_generator.gif" width="850"/>
+Deployed to Heroku.
